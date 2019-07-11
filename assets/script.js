@@ -1,17 +1,4 @@
-
-
-
-
-// fim modal
-
 const createItens = iniciativas => {
-
-
-
-
-
-
-  
   return iniciativas
     .map(item => {
       return `
@@ -47,12 +34,8 @@ const createItens = iniciativas => {
             ><i class="fas fa-envelope"></i
           ></a>
         </p>
-
 <!-- colapissssadooooo -->
 <p>${item.descricao}</p>
-
-
-
 <!-- fim colappisssadoooo -->
     
       </div>
@@ -61,14 +44,9 @@ const createItens = iniciativas => {
     })
     .join("");
 
-
-
-
-
-
 };
 
-let sectionCards = document.querySelector(".cards");
+let sectionCards = document.querySelector(".cardslu");
 sectionCards.innerHTML += createItens(iniciativas);
 
 const limpar = value => {
@@ -79,15 +57,10 @@ const limpar = value => {
 
 const search = () => {
   let inputValue = document.querySelector("input").value;
+  inputValue=inputValue.toLowerCase();
   let result = iniciativas.filter(res => {
-    return (
-      res.descricao.includes(inputValue) ||
-      res.nome.includes(inputValue) ||
-      res.idealizadoras.includes(inputValue) ||
-      res.keywords.includes(inputValue)
-      );
+    return res.keywords.includes(inputValue);
     });
   sectionCards.innerHTML = createItens(result);
 };
-
 

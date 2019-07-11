@@ -63,15 +63,16 @@
               <a class="nav-link" href="#idformulario">Contato</a>
             </li>
           </ul>
-          <form class="form-inline my-2 my-lg-0">
+
             <input
-              class="form-control mr-sm-2"
+              class="input__search form-control mr-sm-2"
               type="search"
               placeholder="Pesquisar"
               aria-label="Pesquisar"
+              onKeyUp="limpar(this.value)"
             />
             <button
-              onKeyUp="limpar(this.value)"
+
               onclick="search()"
               class="btn btn-light botaozinho my-2 my-sm-0"
               type="search"
@@ -79,7 +80,7 @@
             >
               Pesquisar
             </button>
-          </form>
+
         </div>
       </nav>
 
@@ -96,13 +97,13 @@
           dignissimos a eaque deleniti, modi maiores.
         </h4>
 
-        <h4>
+        <!-- <h4>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur
           iste laudantium magnam omnis quo obcaecati error repellat. Assumenda
           ex at voluptas, dolor culpa maxime quos vero. Fugiat tenetur
           exercitationem quis.
-        </h4>
-        <h4>
+        </h4> -->
+        <!-- <h4>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quo
           quaerat beatae vitae unde fuga autem, voluptatum ab animi optio
           nostrum nihil corporis asperiores, molestiae dolorem, accusamus
@@ -113,14 +114,14 @@
           quasi, nisi laudantium consequuntur impedit voluptatibus quod eos.
           Sequi, reiciendis ipsam dicta sunt officia nemo delectus repudiandae,
           dolor neque nam sed?
-        </h4>
+        </h4> -->
       </section>
 
       <!-- busca -->
       <!-- <section class="busca"></section> -->
       <section id="idiniciativas" class="container">
         <div><h2>Iniciativas</h2></div>
-        <div class="cards"></div>
+        <div class="cardslu"></div>
       </section>
 
       <!-- formulario -->
@@ -128,7 +129,7 @@
         <div class="formulario__titulo">
           <h2>Contato</h2>
 
-          <h4>Gostaria de enviar uma mensagem? Preencha o formulário.</h4>
+          <h4>Conhece alguma iniciativa e gostaria que estivesse aqui? Preencha o formulário e envie uma mensagem.</h4>
         </div>
         <form>
           <div class="form-group">

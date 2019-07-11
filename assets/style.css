@@ -93,7 +93,7 @@ header {
   justify-content: space-around;
   font-size: 30px;
 }
-.cards {
+.cardslu {
   max-width: 100%;
   display: flex;
   flex-wrap: wrap;
