@@ -1,8 +1,9 @@
-html{
+html {
   scroll-behavior: smooth;
 }
-
-
+.fundo {
+  background-color: #ffe1d5;
+}
 
 * {
   margin: 0;
@@ -16,15 +17,7 @@ h1 {
 h2 {
   padding: 40px 0;
 }
-.fundo {
-  background-image: url("./desktoprosa.jpg");
-  width: 100%;
-  /* height: 100vh; */
-  background-position: left;
-  z-index: 999;
-  /* position: fixed; */
-  background-size: cover;
-}
+
 header {
   background: #fff0f1;
   display: flex;
@@ -76,7 +69,7 @@ header {
 }
 .cartao {
   width: 250px;
-  height: auto;
+  height: 600px;
   margin: 10px;
   text-align: justify;
   background-color: transparent;

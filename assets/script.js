@@ -35,7 +35,47 @@ const createItens = iniciativas => {
           ></a>
         </p>
 <!-- colapissssadooooo -->
-<p>${item.descricao}</p>
+
+
+
+
+
+
+
+<!-- Botão para acionar modal -->
+<button type="button" class="btn btn-light" data-toggle="modal" data-target="#ExemploModalCentralizado">
+  Saiba Mais
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="ExemploModalCentralizado" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="TituloModalCentralizado">${item.nome}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>${item.descricao}</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
 <!-- fim colappisssadoooo -->
     
       </div>
@@ -64,3 +104,14 @@ const search = () => {
   sectionCards.innerHTML = createItens(result);
 };
 
+
+// var botao = document.getElementById('pesquisar');
+    
+//     botao.addEventListener("click", () => {
+//         var busca = document.querySelector('input').value.toLowerCase();
+        
+//         var filtro = iniciativas.filter((item) => {
+//             return item.descricao.toLowerCase().includes(busca) || item.nome.toLowerCase().includes(busca)
+//         }); 
+//         cards.innerHTML = createCard(filtro);
+//     })

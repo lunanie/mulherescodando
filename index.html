@@ -64,23 +64,22 @@
             </li>
           </ul>
 
-            <input
-              class="input__search form-control mr-sm-2"
-              type="search"
-              placeholder="Pesquisar"
-              aria-label="Pesquisar"
-              onKeyUp="limpar(this.value)"
-            />
-            <button
-
-              onclick="search()"
-              class="btn btn-light botaozinho my-2 my-sm-0"
-              type="search"
-              aria-label="Search"
-            >
-              Pesquisar
-            </button>
-
+          <input
+            class="input__search form-control mr-sm-2"
+            type="search"
+            placeholder="Pesquisar"
+            aria-label="Pesquisar"
+            onKeyUp="limpar(this.value)"
+          />
+          <button
+            id="pesquisar"
+            onclick="search()"
+            class="search btn btn-light botaozinho my-2 my-sm-0"
+            type="search"
+            aria-label="Search"
+          >
+            Pesquisar
+          </button>
         </div>
       </nav>
 
@@ -129,7 +128,8 @@
         <div class="formulario__titulo">
           <h2>Contato</h2>
 
-          <h4>Conhece alguma iniciativa e gostaria que estivesse aqui? Preencha o formulário e envie uma mensagem.</h4>
+          <h4>Conhece alguma iniciativa e gostaria que estivesse aqui?</h4>
+          <h4>Preencha o formulário e envie uma mensagem.</h4>
         </div>
         <form>
           <div class="form-group">
@@ -163,11 +163,21 @@
       </section>
       <!-- fim do formulario -->
 
-      <footer>
-        <div>
-        <h5>Redes sociais</h5>
-      </div>
+      <footer class="footer">
+        <div class="social d-flex justify-content-center">
+          <a href="#" class="mx-2">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#" class="mx-2">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" class="mx-2">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
       </footer>
+
+      <!-- fim do footer -->
     </main>
   </body>
 
