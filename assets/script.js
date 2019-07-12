@@ -1,6 +1,6 @@
 const createItens = iniciativas => {
   return iniciativas
-    .map(item => {
+    .map((item, index) => {
       return `
       <div class="cartao">
       <img
@@ -34,21 +34,16 @@ const createItens = iniciativas => {
             ><i class="fas fa-envelope"></i
           ></a>
         </p>
-<!-- colapissssadooooo -->
-
-
-
-
-
-
+        
+<!-- modaaaaaaaaaaalllllllllllll -->
 
 <!-- Botão para acionar modal -->
-<button type="button" class="btn btn-light" data-toggle="modal" data-target="#ExemploModalCentralizado">
+<button type="button" class="btn btn-light" data-toggle="modal" data-target="#ExemploModalCentralizado${index}">
   Saiba Mais
 </button>
 
 <!-- Modal -->
-<div class="modal fade" id="ExemploModalCentralizado" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+<div class="modal fade" id="ExemploModalCentralizado${index}" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -67,23 +62,13 @@ const createItens = iniciativas => {
   </div>
 </div>
 
-
-
-
-
-
-
-
-
-
-<!-- fim colappisssadoooo -->
+<!-- fim modalllllll -->
     
       </div>
     </div>
             `;
     })
     .join("");
-
 };
 
 let sectionCards = document.querySelector(".cardslu");
@@ -95,23 +80,16 @@ const limpar = value => {
   }
 };
 
-// const search = () => {
-//   let inputValue = document.querySelector("input").value;
-//   inputValue=inputValue.toLowerCase();
-//   let result = iniciativas.filter(res => {
-//     return res.keywords.includes(inputValue);
-//     });
-//   sectionCards.innerHTML = createItens(result);
-// };
 
+var botao = document.getElementById("pesquisar");
 
-var botao = document.getElementById('pesquisar');
-    
-    botao.addEventListener("click", () => {
-        var busca = document.getElementById('pesquisarInput').value.toLowerCase();
-        
-        var filtro = iniciativas.filter((item) => {
-            return item.descricao.toLowerCase().includes(busca) || item.nome.toLowerCase().includes(busca)
-        }); 
-        sectionCards.innerHTML = createItens(filtro);
-    })
+botao.addEventListener("click", () => {
+  var busca = document.getElementById("pesquisarInput").value.toLowerCase();
+  var filtro = iniciativas.filter(item => {
+    return (
+      item.descricao.toLowerCase().includes(busca) ||
+      item.nome.toLowerCase().includes(busca)
+    );
+  });
+  sectionCards.innerHTML = createItens(filtro);
+});
