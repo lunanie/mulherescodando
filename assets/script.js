@@ -95,14 +95,14 @@ const limpar = value => {
   }
 };
 
-const search = () => {
-  let inputValue = document.querySelector("input").value;
-  inputValue=inputValue.toLowerCase();
-  let result = iniciativas.filter(res => {
-    return res.keywords.includes(inputValue);
-    });
-  sectionCards.innerHTML = createItens(result);
-};
+// const search = () => {
+//   let inputValue = document.querySelector("input").value;
+//   inputValue=inputValue.toLowerCase();
+//   let result = iniciativas.filter(res => {
+//     return res.keywords.includes(inputValue);
+//     });
+//   sectionCards.innerHTML = createItens(result);
+// };
 
 
 var botao = document.getElementById('pesquisar');
