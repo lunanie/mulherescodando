@@ -105,13 +105,13 @@ const search = () => {
 };
 
 
-// var botao = document.getElementById('pesquisar');
+var botao = document.getElementById('pesquisar');
     
-//     botao.addEventListener("click", () => {
-//         var busca = document.getElementById('pesquisarInput').value.toLowerCase();
+    botao.addEventListener("click", () => {
+        var busca = document.getElementById('pesquisarInput').value.toLowerCase();
         
-//         var filtro = iniciativas.filter((item) => {
-//             return item.descricao.toLowerCase().includes(busca) || item.nome.toLowerCase().includes(busca)
-//         }); 
-//         sectionCards.innerHTML = createItens(filtro);
-//     })
+        var filtro = iniciativas.filter((item) => {
+            return item.descricao.toLowerCase().includes(busca) || item.nome.toLowerCase().includes(busca)
+        }); 
+        sectionCards.innerHTML = createItens(filtro);
+    })
