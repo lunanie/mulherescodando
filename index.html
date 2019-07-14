@@ -135,7 +135,7 @@
 
 
 
-        <form name="mulherescodandoform" netlify-honeypot="bot-field" method="POST" data-netlify="true">
+        <form class="needs-validation" novalidate name="mulherescodandoform" netlify-honeypot="bot-field" method="POST" data-netlify="true">
             <p class="hidden">
                 <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
               </p>
@@ -147,7 +147,11 @@
               name="name"
               id="name"
               placeholder="Digite seu nome"
+              required
             />
+            <div class="invalid-feedback">
+                Por favor, digite o seu nome.
+              </div>
           </div>
           <div class="form-group">
             <label for="exampleFormControlInput1">Endereço de email</label>
@@ -157,7 +161,11 @@
               class="form-control"
               id="exampleFormControlInput1"
               placeholder="nome@exemplo.com"
+              required
             />
+            <div class="invalid-feedback">
+                Por favor, digite seu email.
+              </div>
           </div>
           <div class="form-group">
             <label for="exampleFormControlTextarea1">Digite sua mensagem</label>
@@ -166,7 +174,11 @@
               class="form-control"
               id="exampleFormControlTextarea1"
               rows="3"
+              required
             ></textarea>
+            <div class="invalid-feedback">
+                Por favor, escreva uma mensagem.
+              </div>
           </div>
 
           <!-- <div class="form-group">
