@@ -131,13 +131,18 @@
           <h4>Conhece alguma iniciativa e gostaria que estivesse aqui?</h4>
           <h4>Preencha o formulário e envie uma mensagem.</h4>
         </div>
-        <form>
+
+
+
+
+        <form action="POST" data-netlify="true">
           <div class="form-group">
             <label for="exampleFormControlInput1">Nome</label>
             <input
-              type="nome"
+              type="text"
               class="form-control"
-              id="nome"
+              name="name"
+              id="name"
               placeholder="Digite seu nome"
             />
           </div>
@@ -145,6 +150,7 @@
             <label for="exampleFormControlInput1">Endereço de email</label>
             <input
               type="email"
+              name="email"
               class="form-control"
               id="exampleFormControlInput1"
               placeholder="nome@exemplo.com"
@@ -158,8 +164,24 @@
               rows="3"
             ></textarea>
           </div>
+
+          <div class="form-group">
+            <label for="uploadarquivo">Upload de arquivo</label>
+            <input type="file"
+              id="uploadarquivo"
+              name="uploadarquivo"
+              placeholder="Upload de arquivo"
+            />
+          </div>
+          <div class="field">
+            <div data-netlify-recaptcha="true"></div>
+          </div>
           <button id="botaoformulario" type="submit" class="btn btn-light my-1">Enviar</button>
         </form>
+
+
+
+
       </section>
       <!-- fim do formulario -->
 
