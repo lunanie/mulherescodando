@@ -1,4 +1,4 @@
-# mulherescodando
+# Mulheres Codando
 
 Site que reúne iniciativas que ensinam mulheres a programar.
 
